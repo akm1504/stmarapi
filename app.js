@@ -7,7 +7,7 @@ var NSEAPI = API.NSE;
 
 var app = express();
 
-app.listen(port, () => {
+app.listen(443, () => {
   console.log("Server running on port 3000");
 });
 
