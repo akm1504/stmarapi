@@ -1,15 +1,14 @@
 // var API = require('indian-stock-exchange');
 var express = require("express");
 var API = require('./index');
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
+const INDEX = '/indexX.html';
 
-var app = express();
-
-app.listen(port, () => {
-  console.log("Server running on port 3000");
-});
+const server = express()
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 // National Stock Exchange (NSE) APIS
 
