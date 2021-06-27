@@ -6,7 +6,7 @@ var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
 const INDEX = '/indexX.html';
 
-const server = express()
+var app = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
