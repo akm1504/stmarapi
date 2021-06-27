@@ -7,8 +7,8 @@ var NSEAPI = API.NSE;
 const INDEX = '/indexX.html';
 
 var app = express()
-  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  app.use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 // National Stock Exchange (NSE) APIS
 
