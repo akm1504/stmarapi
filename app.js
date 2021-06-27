@@ -1,13 +1,13 @@
 // var API = require('indian-stock-exchange');
 var express = require("express");
 var API = require('./index');
-const port = process.env.PORT || 80;
+var port = process.env.PORT || 80;
 var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
 
 var app = express();
 
-app.listen(443, () => {
+app.listen(port, () => {
   console.log("Server running on port 3000");
 });
 
